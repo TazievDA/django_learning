@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Рецепты</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-{% for ingredient, amount in recipe.items %}
-    <p>{{ ingredient }}: {{ amount }}</p>
-{% empty %}
-    <p>Такого рецепта не знаю :(</p>
+<p align="center" style="text-align: center;font-size: 20px;border:2px solid #0674fb;border-radius:4px;display:inline-block;padding:8px 25px 8px 25px">Список рецептов:</p>
+{% for dish_name in dishes_names %}
+<ul>
+  <li><a href="/{{ dish_name }}/">{{ dish_name }}</a></li>
+</ul>
 {% endfor %}
+
 </body>
 </html>
